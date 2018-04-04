@@ -2,10 +2,26 @@
   "name": "educt",
   "version": "0.0.1",
   "description": "Educt is a testing utility for React and React Native.",
-  "main": "index.js",
+  "main": "bundle.js",
+  "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "test": "jest"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "jest": "^21.2.1",
+    "react-native": "^0.49.3",
+    "rollup": "^0.50.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
 }
